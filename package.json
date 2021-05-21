@@ -1,0 +1,25 @@
+{
+  "name": "try-dangerjs",
+  "version": "1.0.0",
+  "description": "Trying DangerJS for blocking PR that do not follow a specific format, such as *AB-1234*",
+  "main": "index.js",
+  "scripts": {
+    "eslint": "eslint --init",
+    "prettier": "prettier ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/w-b-dev/try-dangerjs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/w-b-dev/try-dangerjs/issues"
+  },
+  "homepage": "https://github.com/w-b-dev/try-dangerjs#readme",
+  "devDependencies": {
+    "eslint": "^7.26.0",
+    "prettier": "^2.3.0"
+  }
+}
