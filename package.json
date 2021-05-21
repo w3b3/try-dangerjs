@@ -4,9 +4,10 @@
   "description": "Trying DangerJS for blocking PR that do not follow a specific format, such as *AB-1234*",
   "main": "index.js",
   "scripts": {
-    "eslint": "eslint --init",
-    "prettier": "prettier .",
-    "prepare": "husky install"
+    "eslint": "eslint --no-ignore --fix-dry-run",
+    "prettier": "prettier ./src --write",
+    "prepare": "husky install",
+    "danger": "danger"
   },
   "repository": {
     "type": "git",
