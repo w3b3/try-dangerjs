@@ -45,4 +45,4 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Run DANGER
-        run: npm run ci ${{ github.base_ref }}
+        run: npm run ci -- ${{ github.base_ref }}
