@@ -39,4 +39,4 @@ jobs:
 #    - name: yarn build
 #      run: yarn build
     - name: Danger JS
-      run: yarn danger ci
+      run: yarn danger ci https://github.com/w-b-dev/try-dangerjs/pull/3
