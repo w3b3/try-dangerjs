@@ -30,6 +30,7 @@ jobs:
       # Node
       - name: Setup Node ${{ matrix.node }}
         env:
+          DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         uses: actions/setup-node@v2
         with:
@@ -42,7 +43,6 @@ jobs:
 
       - name: Install dependencies
         env:
-          DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
         run: npm ci
 
       - name: Danger JS
