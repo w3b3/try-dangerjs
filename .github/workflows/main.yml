@@ -36,7 +36,7 @@ jobs:
 
     - name: yarn install, build, and test
       run: |
-      yarn install --frozen-lockfile
+      yarn install --frozen-lockfile |
       yarn build
 
     - name: Danger JS
