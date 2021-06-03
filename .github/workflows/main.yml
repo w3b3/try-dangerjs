@@ -27,6 +27,7 @@ jobs:
         node: ['12']
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+    - uses: actions/checkout@v2
     - name: Setup Node ${{ matrix.node }}
       uses: actions/setup-node@v2
       with:
