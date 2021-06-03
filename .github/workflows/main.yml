@@ -29,6 +29,8 @@ jobs:
 
       # Node
       - name: Setup Node ${{ matrix.node }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node }}
