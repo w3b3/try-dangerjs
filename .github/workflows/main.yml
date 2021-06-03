@@ -34,16 +34,16 @@ jobs:
           node-version: ${{ matrix.node }}
 
       # Runs a single command using the runners shell
-      - name: Install dependencies
 
       - name: Danger JS
         uses: danger/danger-js@9.1.6
 
+      - name: Install dependencies
         env:
-          #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
-          REF: ${{ github.base_ref }}
-        run: npm ci && npm run danger_ci -- $REF
+        run: npm ci
 
       - name: Danger JS
+        env:
+          REF: ${{ github.base_ref }}
         run: npm ci && npm run danger_ci -- $REF
