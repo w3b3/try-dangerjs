@@ -42,7 +42,6 @@ jobs:
         uses: danger/danger-js@9.1.6
 
       - name: Install dependencies
-        env:
         run: npm ci
 
       - name: Danger JS
