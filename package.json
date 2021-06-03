@@ -7,7 +7,8 @@
     "eslint": "eslint --no-ignore --fix-dry-run",
     "prettier": "prettier ./src --write",
     "prepare": "husky install",
-    "danger": "danger pr"
+    "danger": "danger pr",
+    "ci": "danger pr ci"
   },
   "repository": {
     "type": "git",
