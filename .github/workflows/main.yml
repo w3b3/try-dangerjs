@@ -20,23 +20,22 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     env:
-      DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
+#      DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    strategy:
-      matrix:
-        node: ['12']
-    # Steps represent a sequence of tasks that will be executed as part of the job
+#    strategy:
+#      matrix:
+#        node: ['12']
     steps:
     - uses: actions/checkout@v2
-    - name: Setup Node ${{ matrix.node }}
-      uses: actions/setup-node@v2
-      with:
-        node-version: ${{ matrix.node }}
-    - name: Install yarn
-      run: npm install -g yarn
-    - name: yarn install
-      run: yarn install --frozen-lockfile
-#    - name: yarn build
-#      run: yarn build
-    - name: Danger JS
-      run: yarn danger ci https://github.com/w-b-dev/try-dangerjs/pull/3
+    - name: Danger
+      uses: danger/danger-js@10.6.4
+#    - name: Setup Node ${{ matrix.node }}
+#      uses: actions/setup-node@v2
+#      with:
+#        node-version: ${{ matrix.node }}
+#    - name: Install yarn
+#      run: npm install -g yarn
+#    - name: yarn install
+#      run: yarn install --frozen-lockfile
+#    - name: Danger JS
+#      run: yarn danger ci https://github.com/w-b-dev/try-dangerjs/pull/3
