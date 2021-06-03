@@ -38,13 +38,19 @@ jobs:
 
       # Runs a single command using the runners shell
 
-      - name: Danger JS
-        uses: danger/danger-js@9.1.6
+#      - name: Danger JS
+#        uses: danger/danger-js@9.1.6
+      - name: Install yarn
+        run: npm install -g yarn
 
-      - name: Install dependencies
-        run: npm ci
+      - name: yarn install, build, and test
+        run: |
+        yarn install --frozen-lockfile
+        yarn build
+        yarn test
 
       - name: Danger JS
-        env:
-          REF: ${{ github.base_ref }}
-        run: npm ci && npm run danger_ci -- $REF
+#        env:
+#          REF: ${{ github.base_ref }}
+#        run: npm ci && npm run danger_ci -- $REF
+        run: yarn danger ci
