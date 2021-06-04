@@ -1,7 +1,26 @@
 # try-dangerjs
 
-Trying DangerJS for blocking PR that do not follow a specific format, such as _AB-1234_
+Trying [DangerJS](https://github.com/danger/danger-js).
 
-Trying [this](https://medium.com/@ivan.ha/integrate-danger-js-in-5-minutes-55515bc5355d)
+- Currently set to run on PR creation and pushing commits to a PR.
 
-- Where to store DANGER_GITHUB_API_TOKEN
+- Only being triggered against `dev`.
+
+## Current development target
+
+- [ ] Github action should take variable to fill **PR url**.
+- [ ] Block the PR if it doesn't match _AB-1234_ as **title prefix**. This is **check#001**.
+
+Nice to have:
+
+- [ ] Add a comment to the PR (or update its BODY), mentioning it passed check#001 (above) on a specific date.
+- [ ] It should run in **any branch** other than `main/master`.
+
+## Other possible options
+
+- [ ] Enforce CHANGELOGs
+- [ ] Enforce links to Trello/JIRA in PR/MR bodies
+- [ ] Enforce using descriptive labels
+- [ ] Look out for common anti-patterns
+- [ ] Highlight interesting build artifacts
+- [ ] Give warnings when specific files change
